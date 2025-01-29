@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1065145269312726072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6561256526456321325}
+  - component: {fileID: 8366687913967725451}
+  m_Layer: 0
+  m_Name: ShoppingList
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6561256526456321325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065145269312726072}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.74073815, y: 1.22, z: 0.07405776}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8366687913967725451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065145269312726072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95c9c3f765d6bed4293af68b3b6a18ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPossibleItems:
+  - {fileID: 11400000, guid: b58265d188dbbd04b89390dad848a2e9, type: 2}
+  - {fileID: 11400000, guid: a386686523540bc49a97153baa377303, type: 2}
+  - {fileID: 11400000, guid: 263120b4f6852114e99cf12bcf42caaa, type: 2}
+  - {fileID: 11400000, guid: ecdda002ca34a13469e1b0ba6c70cc6f, type: 2}
+  - {fileID: 11400000, guid: 5a98259028f16194daa371b2500a2b42, type: 2}
+  availableItemsList:
+  - {fileID: 11400000, guid: a386686523540bc49a97153baa377303, type: 2}
+  - {fileID: 11400000, guid: 5a98259028f16194daa371b2500a2b42, type: 2}
+  shoppingListItems:
+  - name: Laundry Detergent
+    item: {fileID: 11400000, guid: ecdda002ca34a13469e1b0ba6c70cc6f, type: 2}
+    numberRequired: 0
+    numberCollected: 0
+    isCollected: 0
+  - name: Football
+    item: {fileID: 11400000, guid: 263120b4f6852114e99cf12bcf42caaa, type: 2}
+    numberRequired: 0
+    numberCollected: 0
+    isCollected: 0
+  - name: Apple
+    item: {fileID: 11400000, guid: b58265d188dbbd04b89390dad848a2e9, type: 2}
+    numberRequired: 0
+    numberCollected: 0
+    isCollected: 0
+  numOfItems: 3
+  multipleOfSameItem: 1
+  multipleRange: {x: 1, y: 2}
+  shoppingListContainer: {fileID: 0}
+  shoppingListElement: {fileID: 1261578650726123639, guid: 50f47890f92f45c40a4d46973c812955,
+    type: 3}
