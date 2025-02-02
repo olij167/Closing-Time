@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using static UnityEditor.Progress;
 
 public class ShoppingList : MonoBehaviour
 {
-    public List<Item> allPossibleItems;
+    //public List<Item> allPossibleItems;
     public List<Item> availableItemsList;
     public List<ShoppingListItem> shoppingListItems;
     public float listBudget;
     public TextMeshProUGUI listBudgetText;
+    public TextMeshProUGUI totalItemsText;
 
     public int numOfItems = 3;
     public bool multipleOfSameItem;
@@ -22,8 +24,8 @@ public class ShoppingList : MonoBehaviour
     public List<ItemInCart> itemsInCart;
 
     public float totalCost;
-    public int itemsRequired;
-    public int itemsCollected;
+    public int listItemsRequired;
+    public int listItemsCollected;
 
     [System.Serializable]
     public class ItemInCart
@@ -42,6 +44,8 @@ public class ShoppingList : MonoBehaviour
         public int numberRequired;
         //public int numberCollected;
         public bool isCollected;
+
+        public TextMeshProUGUI listElement;
     }
 
     //public void Start()
@@ -55,13 +59,13 @@ public class ShoppingList : MonoBehaviour
     //}
 
     [ContextMenu("GenerateList")]
-    public void GenerateListItems()
+    public void GenerateListItems(List<Item> itemsInStore)
     {
         availableItemsList = new List<Item>();
 
-        foreach (Item item in allPossibleItems) { availableItemsList.Add(item); }
+        foreach (Item item in itemsInStore) { availableItemsList.Add(item); }
 
-        shoppingListItems = new List<ShoppingListItem>();
+        shoppingListItems.Clear();
         for (int i = 0; i < numOfItems; i++)
         {
             if (shoppingListItems.Count >= i)
@@ -77,17 +81,19 @@ public class ShoppingList : MonoBehaviour
                 else newItem.numberRequired = 1;
 
                 listBudget += newItem.item.itemValue * newItem.numberRequired;
-                itemsRequired += newItem.numberRequired;
+                listItemsRequired += newItem.numberRequired;
 
                 shoppingListItems.Add(newItem);
                 availableItemsList.Remove(item); //ensure an item isnt selected twice
 
-                TextMeshProUGUI listElement = Instantiate(shoppingListElement, shoppingListContainer.transform);
-                listElement.text = item.itemName + " - " + 0 + " / " + newItem.numberRequired;
+                newItem.listElement = Instantiate(shoppingListElement, shoppingListContainer.transform);
+                newItem.listElement.text = item.itemName + " - " + 0 + " / " + newItem.numberRequired;
             }
         }
 
         listBudgetText.text = "Budget - $" + listBudget;
+        totalItemsText.text = "Number of Items - " + listItemsRequired;
+        totalItemsText.transform.SetAsLastSibling();
     }
 
     public void AddToCart(Item item)
@@ -103,43 +109,44 @@ public class ShoppingList : MonoBehaviour
         {
             if (itemsInCart[i].item == itemInCart.item)
             {
-                itemsInCart[i].numberCollected++;
+                itemsInCart[i].numberCollected += 1;
+                itemInCart.numberCollected = itemsInCart[i].numberCollected;
+
                 totalCost += item.itemValue;
 
                 itemAdded = true;
+                Debug.Log("Existing item added to cart");
                 break;
             }
-
-            //if (i >= allItemsInCart.Count)
-            //{
-            //    allItemsInCart.Add(itemInCart);
-            //    totalCost += item.itemValue;
-            //    itemAdded = true;
-            //}
         }
 
         if (!itemAdded)
         {
             itemsInCart.Add(itemInCart);
+            Debug.Log("new item added to cart");
+
             totalCost += item.itemValue;
         }
 
         CheckList(itemInCart);
     }
-    public void CheckList(ItemInCart itemIncart)
+    public void CheckList(ItemInCart itemInCart)
     {
-
         for (int j = 0; j < shoppingListItems.Count; j++)
         {
-            if (itemIncart.item == shoppingListItems[j].item)
+            if (itemInCart.item.itemName == shoppingListItems[j].item.itemName)
             {
-                itemIncart.isOnList = true;
-                //shoppingListItems[j].numberCollected = item.numberCollected;
-                itemsCollected++;
+                if (!itemInCart.isOnList)
+                    itemInCart.isOnList = true;
 
-                if (itemIncart.numberCollected >= shoppingListItems[j].numberRequired)
+                listItemsCollected++;
+
+                shoppingListItems[j].listElement.text = itemInCart.item.itemName + " - " + itemInCart.numberCollected + " / " + shoppingListItems[j].numberRequired;
+
+                if (itemInCart.numberCollected >= shoppingListItems[j].numberRequired)
                 {
                     //Cross off shopping list item
+                    shoppingListItems[j].listElement.fontStyle = FontStyles.Strikethrough;
                     shoppingListItems[j].isCollected = true;
 
                 }
@@ -149,20 +156,13 @@ public class ShoppingList : MonoBehaviour
                     shoppingListItems[j].isCollected = false;
                 }
 
-                foreach (Transform c in shoppingListContainer.transform)
-                {
-                    if (c.GetComponent<TextMeshProUGUI>().text.Contains(itemIncart.item.itemName))
-                    {
-                        c.GetComponent<TextMeshProUGUI>().text = itemIncart.item.itemName + " - " + itemIncart.numberCollected + 
-                            " / " + shoppingListItems[j].numberRequired;
-                    }
-                }
+                break;
             }
-           
         }
+        
 
         
     }
 
-
+   
 }

@@ -44,7 +44,17 @@ public class Menu : MonoBehaviour
     }
     public void SetGameLength()
     {
-        gameSettings.amountOfTime = int.Parse(gameLengthDropdown.options[gameLengthDropdown.value].text);
+        bool canParse = int.TryParse(gameLengthDropdown.options[gameLengthDropdown.value].text, out int x);
+
+        if (canParse)
+        {
+            gameSettings.amountOfTime = int.Parse(gameLengthDropdown.options[gameLengthDropdown.value].text);
+            gameSettings.unlimitedTime = false;
+        }
+        else
+        {
+            gameSettings.unlimitedTime = true;
+        }
         //switch (gameLengthDropdown.value)
         //{
         //    case 0:

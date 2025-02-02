@@ -8,12 +8,12 @@ public class GameSetUp : MonoBehaviour
 
     public GameTimer gameTimer;
     public ShoppingList shoppingList;
+    public StockManager stockManager;
 
     private void Start()
     {
         SetUpGame();
 
-        gameTimer.StartTimer();
     }
 
     public void SetUpGame()
@@ -21,8 +21,18 @@ public class GameSetUp : MonoBehaviour
         shoppingList.numOfItems = gameSettings.numberOfItems;
         shoppingList.multipleOfSameItem = gameSettings.multiplesOfItems;
 
-        shoppingList.GenerateListItems();
+        stockManager.SetStock();
+        shoppingList.GenerateListItems(stockManager.itemsInStore);
 
-        gameTimer.timer = gameSettings.amountOfTime;
+        if (!gameSettings.unlimitedTime)
+        {
+            gameTimer.timer = gameSettings.amountOfTime;
+            gameTimer.StartTimer();
+        }
+        else
+        {
+            gameTimer.timerActive = false;
+            gameTimer.timerText.text = "Unlimited Time";
+        }
     }
 }

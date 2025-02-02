@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Game Settings
   m_EditorClassIdentifier: 
   selectedLevel: Prototype
-  numberOfItems: 2
-  multiplesOfItems: 1
+  numberOfItems: 3
+  multiplesOfItems: 0
   amountOfTime: 60
+  unlimitedTime: 0

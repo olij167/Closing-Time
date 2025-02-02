@@ -10,4 +10,5 @@ public class GameSettings : ScriptableObject
     public int numberOfItems;
     public bool multiplesOfItems;
     public float amountOfTime;
+    public bool unlimitedTime;
 }

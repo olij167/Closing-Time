@@ -31,7 +31,7 @@ public class CharacterControllerMovement : MonoBehaviour
 
 
     [SerializeField] private float jumpForce = 10f;
-    [SerializeField] private float jumpCooldown = 0.25f;
+    //[SerializeField] private float jumpCooldown = 0.25f;
     [SerializeField] private float airMultiplier = 0.4f;
     [SerializeField] private bool canJump = true;
 

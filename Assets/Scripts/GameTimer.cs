@@ -22,9 +22,12 @@ public class GameTimer : MonoBehaviour
     public TextMeshProUGUI shopperScoreStatText;
     public TextMeshProUGUI leaveEarlyBonusText;
 
+    private ToggleCursorLock toggleCursor;
+
+
     private void Start()
     {
-        timerText = GetComponent<TextMeshProUGUI>();
+        timerText = GetComponentInChildren<TextMeshProUGUI>();
         shoppingList = FindObjectOfType<ShoppingList>();
     }
     public void StartTimer()
@@ -34,9 +37,10 @@ public class GameTimer : MonoBehaviour
 
     public void Update()
     {
-        timerText.text = timer.ToString("00:00");
         if (timerActive)
         {
+            timerText.text = timer.ToString("00:00");
+
             timer -= Time.deltaTime;
 
             if (timer <= 0f)
@@ -51,8 +55,7 @@ public class GameTimer : MonoBehaviour
             SetStats();
             //display end game screen
             endGameScreen.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            toggleCursor.UnlockCursor();
             //Display end game stats
 
         }
@@ -74,10 +77,19 @@ public class GameTimer : MonoBehaviour
         //    listItemsCollected += shoppingList.shoppingListItems[i].numberCollected;
         //}
 
-        listItemsStatText.text = shoppingList.itemsCollected + " / " + shoppingList.itemsRequired + "items collected from list";
+       
     
         //Number of extra items collected
         int extraItemsCollected = 0;
+
+        if (shoppingList.listItemsCollected > shoppingList.listItemsRequired)
+        {
+            extraItemsCollected += shoppingList.listItemsCollected - shoppingList.listItemsRequired;
+            Debug.Log("extra " + (shoppingList.listItemsCollected - shoppingList.listItemsRequired).ToString());
+        }
+
+        listItemsStatText.text = (shoppingList.listItemsCollected - extraItemsCollected) + " / " + shoppingList.listItemsRequired + "items collected from list";
+
 
         for (int i = 0; i < shoppingList.itemsInCart.Count; i++)
         {
@@ -87,7 +99,11 @@ public class GameTimer : MonoBehaviour
             }
         }
 
-        extraItemsStatText.text = extraItemsCollected + " items weren't on the list";
+        extraItemsStatText.text = extraItemsCollected  + " items weren't on the list";
+
+
+        
+
 
         //Budget Accuracy
         budgetStatText.text = "You spent $" + shoppingList.totalCost + ". The budget was $" + shoppingList.listBudget;
