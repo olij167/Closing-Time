@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
   m_Name: Newspaper
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Newspaper
   itemValue: 0
   type: 11
-  prefab: {fileID: 7636196250811479423, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 8113558641555125639, guid: 1be2bc57e2a3b0e479e20bf070109f12, type: 3}

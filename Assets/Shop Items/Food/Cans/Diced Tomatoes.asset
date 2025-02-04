@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Diced Tomatoes
   m_EditorClassIdentifier: 
   itemName: Diced Tomatoes
-  itemValue: 0
+  itemValue: 1
   type: 0
-  prefab: {fileID: -5398761676586727073, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 8123340161755232127, guid: afabffe47cb53154e9e31d82b8c54fe4, type: 3}

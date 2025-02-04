@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: Wet Wipes
   itemValue: 0
   type: 5
-  prefab: {fileID: -8050002964055628726, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 2137269158175744165, guid: 9d368a06b02d6e14eb33354be8acce1d, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
   m_Name: Rice
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Rice
   itemValue: 0
   type: 0
-  prefab: {fileID: 7830506057095532641, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 536073561562538478, guid: f445f3e75feefac48a5f3b87e526e353, type: 3}

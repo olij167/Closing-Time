@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
   m_Name: Canned Dog Food
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Canned Dog Food
   itemValue: 0
   type: 8
-  prefab: {fileID: -7283655208300469740, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 8123340161755232127, guid: afabffe47cb53154e9e31d82b8c54fe4, type: 3}

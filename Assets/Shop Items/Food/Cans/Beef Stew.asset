@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Beef Stew
   m_EditorClassIdentifier: 
   itemName: Beef Stew
-  itemValue: 0
+  itemValue: 4
   type: 0
-  prefab: {fileID: -7283655208300469740, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 8123340161755232127, guid: afabffe47cb53154e9e31d82b8c54fe4, type: 3}

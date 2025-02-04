@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
   m_Name: Candle
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Candle
   itemValue: 0
   type: 3
-  prefab: {fileID: 7789219572543169964, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 1771622652714766762, guid: 5d3b2dc1031cdb54c8869b5fa5711917, type: 3}

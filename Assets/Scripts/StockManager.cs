@@ -105,7 +105,9 @@ public class StockManager : MonoBehaviour
 
                     storeSections[i].stockPositions[k].item = availableItems[r];
                     itemsInStore.Add(availableItems[r]);
-                    objectsInStore.Add(storeSections[i].stockPositions[k].SpawnStock());
+
+                    GameObject stockObj = storeSections[i].stockPositions[k].SpawnStock();
+                    objectsInStore.Add(stockObj);
 
 
 

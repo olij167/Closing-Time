@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
-  m_Name: Cat Food Satchet
+  m_Name: Peach Slices
   m_EditorClassIdentifier: 
-  itemName: 
-  itemValue: 0
-  type: 8
-  prefab: {fileID: -8260893924091023838, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  itemName: Peach Slices
+  itemValue: 3
+  type: 0
+  prefab: {fileID: 8123340161755232127, guid: afabffe47cb53154e9e31d82b8c54fe4, type: 3}

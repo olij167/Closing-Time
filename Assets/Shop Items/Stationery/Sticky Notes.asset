@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
   m_Name: Sticky Notes
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Sticky Notes
   itemValue: 0
   type: 9
-  prefab: {fileID: -3468242181872804520, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 6303913487201458595, guid: c6a3940e86603c642af4410ec3b152ee, type: 3}

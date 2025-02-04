@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
   m_Name: Canned Cat Food
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Canned Cat Food
   itemValue: 0
   type: 8
-  prefab: {fileID: -7283655208300469740, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 1634938311029759342, guid: b3aba96881dabf741837c6549ae7d733, type: 3}

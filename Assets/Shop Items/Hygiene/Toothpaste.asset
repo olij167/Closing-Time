@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
   m_Name: Toothpaste
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Toothpaste
   itemValue: 0
   type: 4
-  prefab: {fileID: -5292997427700654616, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 578213715757025014, guid: 00b451a14ae79e540b6dffe162dfb785, type: 3}

@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: Methylated Spirits
   itemValue: 0
   type: 5
-  prefab: {fileID: -4741738138860294115, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 4857630798581458202, guid: c0ef1cf898f1dd042abbd7d590bbbc5d, type: 3}

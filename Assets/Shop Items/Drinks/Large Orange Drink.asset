@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: Large Orange Drink
   itemValue: 0
   type: 2
-  prefab: {fileID: -5973760530193209919, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 1816563080641149141, guid: deb8f6670681a6d47b7e4cfa642e6173, type: 3}

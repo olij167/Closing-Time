@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Salmon
   m_EditorClassIdentifier: 
   itemName: Salmon
-  itemValue: 0
+  itemValue: 1
   type: 0
-  prefab: {fileID: 6132545899273216012, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 1634938311029759342, guid: b3aba96881dabf741837c6549ae7d733, type: 3}

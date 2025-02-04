@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: Baby Powder
   itemValue: 0
   type: 7
-  prefab: {fileID: -4579319738932909567, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 8933820472870650179, guid: 4cdc9f4a21c3250439448dbde33500d8, type: 3}

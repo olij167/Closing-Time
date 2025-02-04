@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: Antiseptic Cream
   itemValue: 0
   type: 6
-  prefab: {fileID: 5089362973832661347, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 4560944070892799693, guid: c02d0140059a929459997880b51941a1, type: 3}

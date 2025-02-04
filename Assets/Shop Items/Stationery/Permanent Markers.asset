@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
   m_Name: Permanent Markers
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Permanent Markers
   itemValue: 0
   type: 9
-  prefab: {fileID: -7643551702646091915, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 8800986780651282890, guid: 9bbe4532b70cbec45a0c9f1c916d3c8f, type: 3}

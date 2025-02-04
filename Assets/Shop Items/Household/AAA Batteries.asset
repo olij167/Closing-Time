@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: AAA Batteries
   itemValue: 0
   type: 3
-  prefab: {fileID: -3468242181872804520, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 6303913487201458595, guid: c6a3940e86603c642af4410ec3b152ee, type: 3}

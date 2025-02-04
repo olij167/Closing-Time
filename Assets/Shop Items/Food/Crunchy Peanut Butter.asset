@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
   m_Name: Crunchy Peanut Butter
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Crunchy Peanut Butter
   itemValue: 0
   type: 0
-  prefab: {fileID: -4579319738932909567, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 8933820472870650179, guid: 4cdc9f4a21c3250439448dbde33500d8, type: 3}

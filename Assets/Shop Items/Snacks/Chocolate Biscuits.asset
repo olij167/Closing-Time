@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
   m_Name: Chocolate Biscuits
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Chocolate Biscuits
   itemValue: 0
   type: 1
-  prefab: {fileID: -9208125978386938256, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 585713474203979941, guid: e6f4b33e3f7da7944a416a829e7314fd, type: 3}

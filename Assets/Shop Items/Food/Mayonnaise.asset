@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
   m_Name: Mayonnaise
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Mayonnaise
   itemValue: 0
   type: 0
-  prefab: {fileID: -5601184403490408418, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 4857630798581458202, guid: c0ef1cf898f1dd042abbd7d590bbbc5d, type: 3}

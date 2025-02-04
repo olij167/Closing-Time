@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
   m_Name: Long Pasta
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Long Pasta
   itemValue: 0
   type: 0
-  prefab: {fileID: -5292997427700654616, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 2543262344971782372, guid: 52d8ff6aa45bdf140ba436d462f7b1d5, type: 3}

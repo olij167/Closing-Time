@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Chicken Broth
   m_EditorClassIdentifier: 
   itemName: Chicken Broth
-  itemValue: 0
+  itemValue: 1
   type: 0
-  prefab: {fileID: -7283655208300469740, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 5814694071988210195, guid: b5231fcfa8fcb81448cd915df49adb1a, type: 3}

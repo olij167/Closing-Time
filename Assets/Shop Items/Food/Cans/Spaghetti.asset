@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Spaghetti
   m_EditorClassIdentifier: 
   itemName: Spaghetti
-  itemValue: 0
+  itemValue: 1
   type: 0
-  prefab: {fileID: -5398761676586727073, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 5814694071988210195, guid: b5231fcfa8fcb81448cd915df49adb1a, type: 3}

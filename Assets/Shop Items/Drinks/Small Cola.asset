@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: Small Cola
   itemValue: 0
   type: 2
-  prefab: {fileID: -3423812757336377251, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 3897624295645858876, guid: bd22564c07b46d24fa9e044694a590ee, type: 3}

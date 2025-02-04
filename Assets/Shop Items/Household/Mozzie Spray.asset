@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
   m_Name: Mozzie Spray
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Mozzie Spray
   itemValue: 0
   type: 3
-  prefab: {fileID: -242477625753919092, guid: be0826debd8c8254b82c323154c6428d, type: 3}
+  prefab: {fileID: 3100656142374699105, guid: e83e773a5f3030643ae96a75cbb9ed66, type: 3}
