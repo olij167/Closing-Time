@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Cheese Corn Chips
   m_EditorClassIdentifier: 
   itemName: Cheese Corn Chips
-  itemValue: 0
+  itemValue: 2.5
   type: 1
   prefab: {fileID: 6990467494422339411, guid: f99ffee6740da53489620e2f822b831f, type: 3}

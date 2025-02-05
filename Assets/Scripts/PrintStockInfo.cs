@@ -17,6 +17,9 @@ public class PrintStockInfo : MonoBehaviour
 
     public StockManager stockManager;
 
+    public float resizeMultiplier;
+    public List<GameObject> allPrefabs;
+
     //public StockInfo infoAsset;
 
     [ContextMenu("Fill Stock Info")]
@@ -39,7 +42,16 @@ public class PrintStockInfo : MonoBehaviour
 
 
         //infoAsset.stockInfo = stockInfo;
-    } 
+    }
+
+    [ContextMenu("Resize Objects")]
+    public void ResizeObjects()
+    {
+        foreach(GameObject obj in allPrefabs)
+        {
+            obj.transform.localScale = new Vector3(obj.transform.localScale.x * resizeMultiplier, obj.transform.localScale.y * resizeMultiplier, obj.transform.localScale.z * resizeMultiplier);
+        }
+    }
     
     //[ContextMenu("Print Stock Info")]
     //public void LogStockInfo()

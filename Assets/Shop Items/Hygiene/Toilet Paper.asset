@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Toilet Paper
   m_EditorClassIdentifier: 
   itemName: Toilet Paper
-  itemValue: 0
+  itemValue: 5.8
   type: 4
   prefab: {fileID: 7882491349078943680, guid: 2c49c9eeb66120a44a4a5ffe6f3d6a51, type: 3}

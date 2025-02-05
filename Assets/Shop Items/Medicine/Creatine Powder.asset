@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Creatine Powder
   m_EditorClassIdentifier: 
   itemName: Creatine Powder
-  itemValue: 0
+  itemValue: 25
   type: 6
   prefab: {fileID: 8933820472870650179, guid: 4cdc9f4a21c3250439448dbde33500d8, type: 3}

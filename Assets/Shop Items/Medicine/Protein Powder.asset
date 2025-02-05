@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Protein Powder
   m_EditorClassIdentifier: 
   itemName: Protein Powder
-  itemValue: 0
+  itemValue: 30
   type: 6
   prefab: {fileID: 1784866158504371711, guid: 338f870d33b513d49be659ee0d5d3a07, type: 3}

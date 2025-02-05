@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Playing Cards
   m_EditorClassIdentifier: 
   itemName: Playing Cards
-  itemValue: 0
+  itemValue: 2.5
   type: 11
   prefab: {fileID: 6303913487201458595, guid: c6a3940e86603c642af4410ec3b152ee, type: 3}

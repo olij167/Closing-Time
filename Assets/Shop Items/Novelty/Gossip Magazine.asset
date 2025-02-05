@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Gossip Magazine
   m_EditorClassIdentifier: 
   itemName: Gossip Magazine
-  itemValue: 0
+  itemValue: 5.99
   type: 11
   prefab: {fileID: 7654632641890281460, guid: 9096a8cfaa2c1064fac5719412850c68, type: 3}

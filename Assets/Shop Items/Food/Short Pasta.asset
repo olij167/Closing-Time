@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Short Pasta
   m_EditorClassIdentifier: 
   itemName: Short Pasta
-  itemValue: 0
+  itemValue: 2.95
   type: 0
   prefab: {fileID: 585713474203979941, guid: e6f4b33e3f7da7944a416a829e7314fd, type: 3}

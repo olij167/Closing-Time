@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Vitamin B Pills
   m_EditorClassIdentifier: 
   itemName: Vitamin B Pills
-  itemValue: 0
+  itemValue: 29
   type: 6
   prefab: {fileID: 35500588565628438, guid: e4ab10b5232693647a6b0b92fa5085f9, type: 3}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Wet Wipes
   m_EditorClassIdentifier: 
   itemName: Wet Wipes
-  itemValue: 0
+  itemValue: 2.2
   type: 5
   prefab: {fileID: 2137269158175744165, guid: 9d368a06b02d6e14eb33354be8acce1d, type: 3}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Hand Soap
   m_EditorClassIdentifier: 
   itemName: Hand Soap
-  itemValue: 0
+  itemValue: 3
   type: 4
   prefab: {fileID: 5360877777310083789, guid: be459239ad00fe447b6f6da7f8ea7906, type: 3}

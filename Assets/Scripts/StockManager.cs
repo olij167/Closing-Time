@@ -31,6 +31,7 @@ public class StockManager : MonoBehaviour
         [HideInInspector] public string elementName;
         public Item.ItemType type;
         public List<StockPosition> stockPositions;
+        public float sectionRotation;
     }
 
     // Set the itemType for each stock position based on their placement in the storeSections list
@@ -106,7 +107,7 @@ public class StockManager : MonoBehaviour
                     storeSections[i].stockPositions[k].item = availableItems[r];
                     itemsInStore.Add(availableItems[r]);
 
-                    GameObject stockObj = storeSections[i].stockPositions[k].SpawnStock();
+                    GameObject stockObj = storeSections[i].stockPositions[k].SpawnStock(storeSections[i].sectionRotation);
                     objectsInStore.Add(stockObj);
 
 

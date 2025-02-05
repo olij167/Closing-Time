@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Large Water
   m_EditorClassIdentifier: 
   itemName: Large Water
-  itemValue: 0
+  itemValue: 2
   type: 0
   prefab: {fileID: 1816563080641149141, guid: deb8f6670681a6d47b7e4cfa642e6173, type: 3}

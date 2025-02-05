@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Salmon
   m_EditorClassIdentifier: 
   itemName: Salmon
-  itemValue: 1
+  itemValue: 2.5
   type: 0
   prefab: {fileID: 1634938311029759342, guid: b3aba96881dabf741837c6549ae7d733, type: 3}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Bar Soap
   m_EditorClassIdentifier: 
   itemName: Bar Soap
-  itemValue: 0
+  itemValue: 0.75
   type: 4
   prefab: {fileID: 8287622874372645292, guid: ff887083437df2b47a0266ca4df0af1f, type: 3}

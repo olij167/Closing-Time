@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Large Lemonade
   m_EditorClassIdentifier: 
   itemName: Large Lemonade
-  itemValue: 0
+  itemValue: 5
   type: 2
   prefab: {fileID: 1816563080641149141, guid: deb8f6670681a6d47b7e4cfa642e6173, type: 3}

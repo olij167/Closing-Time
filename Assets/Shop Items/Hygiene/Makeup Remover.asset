@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Makeup Remover
   m_EditorClassIdentifier: 
   itemName: Makeup Remover
-  itemValue: 0
+  itemValue: 10
   type: 4
   prefab: {fileID: 3897624295645858876, guid: bd22564c07b46d24fa9e044694a590ee, type: 3}

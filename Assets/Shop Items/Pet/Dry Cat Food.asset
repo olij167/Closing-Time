@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Dry Cat Food
   m_EditorClassIdentifier: 
   itemName: Dry Cat Food
-  itemValue: 0
+  itemValue: 9.5
   type: 8
   prefab: {fileID: 536073561562538478, guid: f445f3e75feefac48a5f3b87e526e353, type: 3}

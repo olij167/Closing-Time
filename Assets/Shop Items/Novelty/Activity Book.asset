@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Activity Book
   m_EditorClassIdentifier: 
   itemName: Activity Book
-  itemValue: 0
+  itemValue: 3.25
   type: 11
   prefab: {fileID: 2178045339656963882, guid: 42224774581271e489657713885d556b, type: 3}

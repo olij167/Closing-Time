@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Baby Formula
   m_EditorClassIdentifier: 
   itemName: Baby Formula
-  itemValue: 0
+  itemValue: 26.5
   type: 7
   prefab: {fileID: 8933820472870650179, guid: 4cdc9f4a21c3250439448dbde33500d8, type: 3}

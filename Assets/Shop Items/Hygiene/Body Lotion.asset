@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Body Lotion
   m_EditorClassIdentifier: 
   itemName: Body Lotion
-  itemValue: 0
+  itemValue: 3.8
   type: 4
   prefab: {fileID: 1531626174036885691, guid: 4138e33a7ad58e348ac336ca8017fc27, type: 3}

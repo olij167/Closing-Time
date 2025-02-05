@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Deodorant
   m_EditorClassIdentifier: 
   itemName: Deodorant
-  itemValue: 0
+  itemValue: 3
   type: 4
   prefab: {fileID: 3100656142374699105, guid: e83e773a5f3030643ae96a75cbb9ed66, type: 3}

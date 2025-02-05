@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Toothpaste
   m_EditorClassIdentifier: 
   itemName: Toothpaste
-  itemValue: 0
+  itemValue: 4.5
   type: 4
   prefab: {fileID: 578213715757025014, guid: 00b451a14ae79e540b6dffe162dfb785, type: 3}

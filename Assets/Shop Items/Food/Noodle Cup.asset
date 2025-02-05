@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Noodle Cup
   m_EditorClassIdentifier: 
   itemName: Noodle Cup
-  itemValue: 0
+  itemValue: 0.5
   type: 0
   prefab: {fileID: 5814694071988210195, guid: b5231fcfa8fcb81448cd915df49adb1a, type: 3}

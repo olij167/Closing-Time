@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BBQ Sauce
   m_EditorClassIdentifier: 
   itemName: BBQ Sauce
-  itemValue: 0
+  itemValue: 2.5
   type: 0
   prefab: {fileID: 3897624295645858876, guid: bd22564c07b46d24fa9e044694a590ee, type: 3}

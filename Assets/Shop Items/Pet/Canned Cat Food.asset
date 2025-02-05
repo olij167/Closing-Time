@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Canned Cat Food
   m_EditorClassIdentifier: 
   itemName: Canned Cat Food
-  itemValue: 0
+  itemValue: 1.6
   type: 8
   prefab: {fileID: 1634938311029759342, guid: b3aba96881dabf741837c6549ae7d733, type: 3}

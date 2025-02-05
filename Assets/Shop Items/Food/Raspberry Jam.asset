@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Raspberry Jam
   m_EditorClassIdentifier: 
   itemName: Raspberry Jam
-  itemValue: 0
+  itemValue: 3.5
   type: 0
   prefab: {fileID: 1771622652714766762, guid: 5d3b2dc1031cdb54c8869b5fa5711917, type: 3}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Pencils
   m_EditorClassIdentifier: 
   itemName: Pencils
-  itemValue: 0
+  itemValue: 0.5
   type: 9
   prefab: {fileID: 8800986780651282890, guid: 9bbe4532b70cbec45a0c9f1c916d3c8f, type: 3}

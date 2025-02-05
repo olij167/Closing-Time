@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Gardening Magazine
   m_EditorClassIdentifier: 
   itemName: Gardening Magazine
-  itemValue: 0
+  itemValue: 6.2
   type: 11
   prefab: {fileID: 7654632641890281460, guid: 9096a8cfaa2c1064fac5719412850c68, type: 3}

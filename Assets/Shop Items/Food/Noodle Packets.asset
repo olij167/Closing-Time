@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Noodle Packets
   m_EditorClassIdentifier: 
   itemName: Noodle Packets
-  itemValue: 0
+  itemValue: 5.5
   type: 0
   prefab: {fileID: 8782029677284536884, guid: 89c5b57db3cc30946bc496e2ff71478b, type: 3}

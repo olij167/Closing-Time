@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b17ee85a247ac84693648e82227198a, type: 3}
-  m_Name: Mozzie Spray
+  m_Name: Insect Repellant
   m_EditorClassIdentifier: 
-  itemName: Mozzie Spray
-  itemValue: 0
+  itemName: Insect Repellant
+  itemValue: 4.5
   type: 3
   prefab: {fileID: 3100656142374699105, guid: e83e773a5f3030643ae96a75cbb9ed66, type: 3}

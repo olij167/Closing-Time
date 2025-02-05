@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Party Mix Lollies
   m_EditorClassIdentifier: 
   itemName: Party Mix Lollies
-  itemValue: 0
+  itemValue: 4
   type: 1
   prefab: {fileID: 6990467494422339411, guid: f99ffee6740da53489620e2f822b831f, type: 3}

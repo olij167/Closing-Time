@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Baby Food
   m_EditorClassIdentifier: 
   itemName: Baby Food
-  itemValue: 0
+  itemValue: 2
   type: 7
   prefab: {fileID: 1771622652714766762, guid: 5d3b2dc1031cdb54c8869b5fa5711917, type: 3}

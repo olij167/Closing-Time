@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Cat Food Sachet
   m_EditorClassIdentifier: 
   itemName: Cat Food Sachet
-  itemValue: 0
+  itemValue: 1.9
   type: 8
   prefab: {fileID: 2137269158175744165, guid: 9d368a06b02d6e14eb33354be8acce1d, type: 3}

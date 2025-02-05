@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Nappies
   m_EditorClassIdentifier: 
   itemName: Nappies
-  itemValue: 0
+  itemValue: 22
   type: 7
   prefab: {fileID: 8782029677284536884, guid: 89c5b57db3cc30946bc496e2ff71478b, type: 3}

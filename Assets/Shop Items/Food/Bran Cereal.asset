@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Bran Cereal
   m_EditorClassIdentifier: 
   itemName: Bran Cereal
-  itemValue: 0
+  itemValue: 3
   type: 0
   prefab: {fileID: 3356875801013778350, guid: 58894612aee911143ad9e0a9e8d1ecca, type: 3}

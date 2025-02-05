@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Slime
   m_EditorClassIdentifier: 
   itemName: Slime
-  itemValue: 0
+  itemValue: 5
   type: 11
   prefab: {fileID: 8933820472870650179, guid: 4cdc9f4a21c3250439448dbde33500d8, type: 3}

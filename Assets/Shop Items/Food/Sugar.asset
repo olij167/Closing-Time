@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Sugar
   m_EditorClassIdentifier: 
   itemName: Sugar
-  itemValue: 0
+  itemValue: 1.75
   type: 0
   prefab: {fileID: 6990467494422339411, guid: f99ffee6740da53489620e2f822b831f, type: 3}

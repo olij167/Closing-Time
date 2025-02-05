@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using static UnityEditor.Progress;
 
 public class GameTimer : MonoBehaviour
 {
     private ShoppingList shoppingList;
+    private ItemScanner itemScanner;
     public float timer;
     public bool timerActive;
     public bool gameOver;
@@ -16,19 +16,29 @@ public class GameTimer : MonoBehaviour
 
     public TextMeshProUGUI timerText;
     public GameObject endGameScreen;
-    public TextMeshProUGUI listItemsStatText;
-    public TextMeshProUGUI extraItemsStatText;
-    public TextMeshProUGUI budgetStatText;
+
+    public float accuracy;
+    public TextMeshProUGUI accuracyScoreText;
+    public TextMeshProUGUI accuracyInfoText;
+
+    public float budget;
+    public TextMeshProUGUI budgetScoreText;
+    public TextMeshProUGUI budgetInfoText;
+
+    public float shopperScore = 0f;
     public TextMeshProUGUI shopperScoreStatText;
     public TextMeshProUGUI leaveEarlyBonusText;
 
     private ToggleCursorLock toggleCursor;
 
-
+    private bool endGameSet = false;
     private void Start()
     {
         timerText = GetComponentInChildren<TextMeshProUGUI>();
         shoppingList = FindObjectOfType<ShoppingList>();
+        itemScanner = FindObjectOfType<ItemScanner>();
+
+        endGameScreen.SetActive(false);
     }
     public void StartTimer()
     {
@@ -55,6 +65,12 @@ public class GameTimer : MonoBehaviour
             SetStats();
             //display end game screen
             endGameScreen.SetActive(true);
+            if (!endGameSet)
+            {
+                itemScanner.SpawnItemsEndGame();
+                endGameSet = true;
+            
+            }
             toggleCursor.UnlockCursor();
             //Display end game stats
 
@@ -88,7 +104,7 @@ public class GameTimer : MonoBehaviour
             Debug.Log("extra " + (shoppingList.listItemsCollected - shoppingList.listItemsRequired).ToString());
         }
 
-        listItemsStatText.text = (shoppingList.listItemsCollected - extraItemsCollected) + " / " + shoppingList.listItemsRequired + "items collected from list";
+        accuracyInfoText.text = (shoppingList.listItemsCollected - extraItemsCollected) + " / " + shoppingList.listItemsRequired + "items collected from list";
 
 
         for (int i = 0; i < shoppingList.itemsInCart.Count; i++)
@@ -99,14 +115,24 @@ public class GameTimer : MonoBehaviour
             }
         }
 
-        extraItemsStatText.text = extraItemsCollected  + " items weren't on the list";
+
+        accuracy = (float)shoppingList.listItemsCollected / (float)shoppingList.listItemsRequired;
+        budget = shoppingList.listBudget / shoppingList.totalCost;
+
+        accuracyScoreText.text = "Accuracy: " + accuracy * 100;
+        accuracyInfoText.text += "\n" + extraItemsCollected + " items weren't on the list";
 
 
-        
 
-
+        budgetScoreText.text = "Budget: " + budget * 100;
         //Budget Accuracy
-        budgetStatText.text = "You spent $" + shoppingList.totalCost + ". The budget was $" + shoppingList.listBudget;
+        budgetInfoText.text = "You spent $" + shoppingList.totalCost + ". \n The budget was $" + shoppingList.listBudget;
+
+         
+
+        Debug.Log("accuracy = " + accuracy + "\n" + "budget = " + budget);
+        shopperScore = accuracy * budget * 100; // << score formula.. did I enter it wrong?
+        shopperScoreStatText.text = "Shopper Score: " + shopperScore; ;
 
         //Shopper Score
         // Compare other stats to get their final score

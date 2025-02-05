@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Ruler
   m_EditorClassIdentifier: 
   itemName: Ruler
-  itemValue: 0
+  itemValue: 1
   type: 9
   prefab: {fileID: 2543262344971782372, guid: 52d8ff6aa45bdf140ba436d462f7b1d5, type: 3}

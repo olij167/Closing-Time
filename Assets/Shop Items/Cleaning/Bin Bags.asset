@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Bin Bags
   m_EditorClassIdentifier: 
   itemName: Bin Bags
-  itemValue: 0
+  itemValue: 2.5
   type: 5
   prefab: {fileID: 6303913487201458595, guid: c6a3940e86603c642af4410ec3b152ee, type: 3}

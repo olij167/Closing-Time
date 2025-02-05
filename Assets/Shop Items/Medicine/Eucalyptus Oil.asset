@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Eucalyptus Oil
   m_EditorClassIdentifier: 
   itemName: Eucalyptus Oil
-  itemValue: 0
+  itemValue: 13.45
   type: 6
   prefab: {fileID: 1771622652714766762, guid: 5d3b2dc1031cdb54c8869b5fa5711917, type: 3}

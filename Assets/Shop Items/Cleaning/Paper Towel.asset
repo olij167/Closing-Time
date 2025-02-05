@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Paper Towel
   m_EditorClassIdentifier: 
   itemName: Paper Towel
-  itemValue: 0
+  itemValue: 3.5
   type: 5
   prefab: {fileID: 7882491349078943680, guid: 2c49c9eeb66120a44a4a5ffe6f3d6a51, type: 3}

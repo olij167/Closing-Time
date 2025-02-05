@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Protein Bar
   m_EditorClassIdentifier: 
   itemName: Protein Bar
-  itemValue: 0
+  itemValue: 3
   type: 6
   prefab: {fileID: 2840917843019328500, guid: e05e039e328f9ac499dc24834e081869, type: 3}

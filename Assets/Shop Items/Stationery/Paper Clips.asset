@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Paper Clips
   m_EditorClassIdentifier: 
   itemName: Paper Clips
-  itemValue: 0
+  itemValue: 1
   type: 9
   prefab: {fileID: 6303913487201458595, guid: c6a3940e86603c642af4410ec3b152ee, type: 3}

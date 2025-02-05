@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Small Orange Drink
   m_EditorClassIdentifier: 
   itemName: Small Orange Drink
-  itemValue: 0
+  itemValue: 1.75
   type: 2
   prefab: {fileID: 3897624295645858876, guid: bd22564c07b46d24fa9e044694a590ee, type: 3}

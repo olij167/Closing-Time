@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Honeycomb Chocolate Bar
   m_EditorClassIdentifier: 
   itemName: Honeycomb Chocolate Bar
-  itemValue: 0
+  itemValue: 2
   type: 1
   prefab: {fileID: 2840917843019328500, guid: e05e039e328f9ac499dc24834e081869, type: 3}

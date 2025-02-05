@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Fabric Softener
   m_EditorClassIdentifier: 
   itemName: Fabric Softener
-  itemValue: 0
+  itemValue: 3.8
   type: 5
   prefab: {fileID: 1816563080641149141, guid: deb8f6670681a6d47b7e4cfa642e6173, type: 3}

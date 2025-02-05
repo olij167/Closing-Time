@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Chocolate Block
   m_EditorClassIdentifier: 
   itemName: Chocolate Block
-  itemValue: 0
+  itemValue: 5
   type: 1
   prefab: {fileID: 7864995188520684654, guid: eec4c2ce323983642a6fd4521ee3f337, type: 3}

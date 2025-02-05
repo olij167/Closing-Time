@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Chocolate Cereal
   m_EditorClassIdentifier: 
   itemName: Chocolate Cereal
-  itemValue: 0
+  itemValue: 8
   type: 0
   prefab: {fileID: 3356875801013778350, guid: 58894612aee911143ad9e0a9e8d1ecca, type: 3}

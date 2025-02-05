@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Newspaper
   m_EditorClassIdentifier: 
   itemName: Newspaper
-  itemValue: 0
+  itemValue: 0.5
   type: 11
   prefab: {fileID: 8113558641555125639, guid: 1be2bc57e2a3b0e479e20bf070109f12, type: 3}

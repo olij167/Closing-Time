@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Large BBQ Chips
   m_EditorClassIdentifier: 
   itemName: Large BBQ Chips
-  itemValue: 0
+  itemValue: 3.5
   type: 1
   prefab: {fileID: 536073561562538478, guid: f445f3e75feefac48a5f3b87e526e353, type: 3}
