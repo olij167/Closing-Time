@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Toolbelt_OJ;
 
 public class GameTimer : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class GameTimer : MonoBehaviour
 
     public TextMeshProUGUI timerText;
     public GameObject endGameScreen;
+    public GameObject endGameStatsParent;
 
     public float accuracy;
     public TextMeshProUGUI accuracyScoreText;
@@ -62,6 +64,9 @@ public class GameTimer : MonoBehaviour
 
         if (gameOver)
         {
+            FindObjectOfType<FirstPersonMovement>().enabled = false;
+            FindObjectOfType<InteractionRaycast>().enabled = false;
+
             SetStats();
             //display end game screen
             endGameScreen.SetActive(true);
@@ -73,6 +78,15 @@ public class GameTimer : MonoBehaviour
             }
             toggleCursor.UnlockCursor();
             //Display end game stats
+
+            //if (itemScanner.showStats)
+            //{
+            //    endGameStatsParent.SetActive(true);
+            //}
+            //else
+            //{
+            //    endGameStatsParent.SetActive(false);
+            //}
 
         }
     }
@@ -101,7 +115,7 @@ public class GameTimer : MonoBehaviour
         if (shoppingList.listItemsCollected > shoppingList.listItemsRequired)
         {
             extraItemsCollected += shoppingList.listItemsCollected - shoppingList.listItemsRequired;
-            Debug.Log("extra " + (shoppingList.listItemsCollected - shoppingList.listItemsRequired).ToString());
+            //Debug.Log("extra " + (shoppingList.listItemsCollected - shoppingList.listItemsRequired).ToString());
         }
 
         accuracyInfoText.text = (shoppingList.listItemsCollected - extraItemsCollected) + " / " + shoppingList.listItemsRequired + "items collected from list";
@@ -130,9 +144,9 @@ public class GameTimer : MonoBehaviour
 
          
 
-        Debug.Log("accuracy = " + accuracy + "\n" + "budget = " + budget);
+        //Debug.Log("accuracy = " + accuracy + "\n" + "budget = " + budget);
         shopperScore = accuracy * budget * 100; // << score formula.. did I enter it wrong?
-        shopperScoreStatText.text = "Shopper Score: " + shopperScore; ;
+        shopperScoreStatText.text = "Shopper Score: " + shopperScore + " / 100";
 
         //Shopper Score
         // Compare other stats to get their final score

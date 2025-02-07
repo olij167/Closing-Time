@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6884330002306618111}
   - component: {fileID: 7054490276975790515}
   - component: {fileID: -8484171430800427353}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Soap Bottle Standard
   m_TagString: Untagged
   m_Icon: {fileID: 0}

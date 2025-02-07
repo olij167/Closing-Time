@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 760235120153079851}
   - component: {fileID: -1674583353685035548}
   - component: {fileID: -6246556636332975078}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sack Standard
   m_TagString: Untagged
   m_Icon: {fileID: 0}

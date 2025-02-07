@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1063982837985313677}
   - component: {fileID: -6885313653443612420}
   - component: {fileID: 734870010929882018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Deodorant
   m_TagString: Untagged
   m_Icon: {fileID: 0}

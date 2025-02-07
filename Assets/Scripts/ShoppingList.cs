@@ -26,6 +26,7 @@ public class ShoppingList : MonoBehaviour
     public float totalCost;
     public int listItemsRequired;
     public int listItemsCollected;
+    public int totalItemsCollected;
 
     [System.Serializable]
     public class ItemInCart
@@ -98,6 +99,7 @@ public class ShoppingList : MonoBehaviour
 
     public void AddToCart(Item item)
     {
+        totalItemsCollected += 1;
         ItemInCart itemInCart = new ItemInCart();
         itemInCart.item = item;
         itemInCart.name = item.itemName;

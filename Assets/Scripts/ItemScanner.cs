@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
+[RequireComponent(typeof(AudioSource))]
 public class ItemScanner : MonoBehaviour
 {
     //Spawn Items on a conveyor belt
@@ -28,6 +30,19 @@ public class ItemScanner : MonoBehaviour
 
     public List<GameObject> listedItems = new List<GameObject>();
 
+    private AudioSource audioSource;
+    public AudioClip scannerAudioClip;
+    public Scrollbar receiptScrollbar;
+
+    public bool showStats;
+
+    public Color receiptTextColour;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     [System.Serializable]
     public class SpawnQueueItem
     {
@@ -36,7 +51,6 @@ public class ItemScanner : MonoBehaviour
         public bool isOnList;
     }
 
-    bool spawnNext = true;
     public void SpawnItemsEndGame()
     {
         //spawn each item in the players cart one by one
@@ -85,7 +99,6 @@ public class ItemScanner : MonoBehaviour
         if (isOnList)
             listedItems.Add(obj);
 
-        spawnNext = true;
     }
 
     public void ScanItem(ItemInWorld itemInWorld)
@@ -94,8 +107,17 @@ public class ItemScanner : MonoBehaviour
         receiptRunningTotal += itemInWorld.item.itemValue;
         costTrackerText.text = "$" + receiptRunningTotal.ToString("00.00");
         // print info onto receipt
+        audioSource.PlayOneShot(scannerAudioClip);
+
+        //itemInWorld.GetComponent<Collider>().enabled = false;
 
         PrintToReceipt(itemInWorld);
+
+        if (receiptList.Count == shoppingList.totalItemsCollected)
+        {
+            showStats = true;
+        }
+
     }
 
     public void PrintToReceipt(ItemInWorld itemInWorld)
@@ -104,10 +126,11 @@ public class ItemScanner : MonoBehaviour
         rItem.text = itemInWorld.item.itemName + " . . . $" + itemInWorld.item.itemValue.ToString("00.00");
         if (listedItems.Contains(itemInWorld.gameObject))
         {
-            rItem.color = Color.green;
+            rItem.color = receiptTextColour;
         }
 
         receiptList.Add(rItem);
+        receiptScrollbar.value = 0;
     }
 
     public void OnTriggerEnter(Collider other)

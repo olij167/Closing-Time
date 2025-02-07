@@ -121,6 +121,7 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}
 --- !u!1 &2033805157152589456
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +186,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: fb6f9cb31b0da2a4d89b3f7df8923d06, type: 3}
+  - {fileID: 2100000, guid: 9ff3b410f0f7bdb4ca8297e33b3f1c88, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -350,6 +351,7 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}
 --- !u!1 &3002499001696899468
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +473,7 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}
 --- !u!1 &3425704539823428831
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,6 +595,7 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}
 --- !u!1 &3555419357678594129
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +717,7 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}
 --- !u!1 &3730504956502566510
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +839,7 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}
 --- !u!1 &4042392338736415327
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,6 +961,7 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}
 --- !u!1 &4687755427193615349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1083,7 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}
 --- !u!1 &4937606422167872141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,6 +1205,7 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}
 --- !u!1 &4960249806668425905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1365,7 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}
 --- !u!1 &5887817630690465376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,6 +1525,7 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}
 --- !u!1 &8797594613279610136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,6 +1647,7 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}
 --- !u!1 &9041872376240798564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,6 +1769,7 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}
 --- !u!1 &9122442211780730258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,3 +1891,4 @@ MonoBehaviour:
   itemType: 0
   item: {fileID: 0}
   numToSpawn: 3
+  spawnedItem: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4771865078394087697}
   - component: {fileID: 5090553357608458076}
   - component: {fileID: -7101216547030974560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tub Large
   m_TagString: Untagged
   m_Icon: {fileID: 0}

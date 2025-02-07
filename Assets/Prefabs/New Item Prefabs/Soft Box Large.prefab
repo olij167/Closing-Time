@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3740144857178331224}
   - component: {fileID: -2791549849148577534}
   - component: {fileID: -7061831493392533158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Soft Box Large
   m_TagString: Untagged
   m_Icon: {fileID: 0}

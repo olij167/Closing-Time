@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3777559000256971969}
   - component: {fileID: 9119635765404325543}
   - component: {fileID: 4175286955574663358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Small Soap Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -123873828758460571}
   - component: {fileID: 742562321095338334}
   - component: {fileID: 1737873944510651953}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spray Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
