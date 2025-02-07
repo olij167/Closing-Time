@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 3870406344892528304}
   - component: {fileID: 6980170450175399489}
   - component: {fileID: 4378297012954983921}
+  - component: {fileID: 6827012544490147596}
   m_Layer: 0
   m_Name: Flat Shelf
   m_TagString: Untagged
@@ -186,7 +187,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ff3b410f0f7bdb4ca8297e33b3f1c88, type: 2}
+  - {fileID: 2100000, guid: bab7509bc7507934f93fe4ff426a5359, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -230,6 +231,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7273346640521843337, guid: fb6f9cb31b0da2a4d89b3f7df8923d06, type: 3}
+--- !u!114 &6827012544490147596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033805157152589456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2acf0adf62718e4199b68a60cb21ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
+  UseRandomUID: 1
+  UseRootUID: 0
+  UseRootColor: 0
+  Color: {r: 0.11372549, g: 0.10980392, b: 0.3372549, a: 0.5058824}
 --- !u!1 &2780268298304413978
 GameObject:
   m_ObjectHideFlags: 0

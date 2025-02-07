@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -8675926120062209111}
   - component: {fileID: -4355239132412174069}
   - component: {fileID: 5408779701088384540}
+  - component: {fileID: 7885413179452866247}
   m_Layer: 8
   m_Name: Bottle 3
   m_TagString: Untagged
@@ -64,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: b398a6fe3fc222a40840873c7cc2f2ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -148,3 +149,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7885413179452866247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3292074347256215613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2acf0adf62718e4199b68a60cb21ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
+  UseRandomUID: 1
+  UseRootUID: 0
+  UseRootColor: 1
+  Color: {r: 0.11372549, g: 0.10980392, b: 0.3372549, a: 0.50980395}

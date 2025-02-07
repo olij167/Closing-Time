@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -7891480713920484124}
   - component: {fileID: 4935643289066922237}
   - component: {fileID: 3663325686699890413}
+  - component: {fileID: -7179308373920521157}
   m_Layer: 8
   m_Name: Soft Box Small
   m_TagString: Untagged
@@ -65,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2813337366143557646, guid: 0aff7b2261187c7419cb494170b01e87, type: 3}
+  - {fileID: 2100000, guid: b398a6fe3fc222a40840873c7cc2f2ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -170,3 +171,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-7179308373920521157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167873716576496967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2acf0adf62718e4199b68a60cb21ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 0
+  UseRandomUID: 1
+  UseRootUID: 0
+  UseRootColor: 1
+  Color: {r: 0.11372549, g: 0.10980392, b: 0.3372549, a: 0.50980395}
