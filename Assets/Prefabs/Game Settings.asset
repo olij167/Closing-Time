@@ -15,5 +15,5 @@ MonoBehaviour:
   selectedLevel: Prototype
   numberOfItems: 3
   multiplesOfItems: 0
-  amountOfTime: 60
+  amountOfTime: 10
   unlimitedTime: 0

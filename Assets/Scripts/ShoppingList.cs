@@ -15,7 +15,7 @@ public class ShoppingList : MonoBehaviour
     public TextMeshProUGUI totalItemsText;
 
     public int numOfItems = 3;
-    public bool multipleOfSameItem;
+    //public bool multipleOfSameItem;
     public Vector2 multipleRange = new Vector2(1, 5);
 
     public GameObject shoppingListContainer;
@@ -77,9 +77,10 @@ public class ShoppingList : MonoBehaviour
                 newItem.item = item;
                 newItem.name = item.itemName;
 
-                if (multipleOfSameItem)
-                    newItem.numberRequired = (int)Random.Range(multipleRange.x, multipleRange.y + 1);
-                else newItem.numberRequired = 1;
+                //if (multipleOfSameItem)
+                //    newItem.numberRequired = (int)Random.Range(multipleRange.x, multipleRange.y + 1);
+                //else
+                newItem.numberRequired = 1;
 
                 listBudget += newItem.item.itemValue * newItem.numberRequired;
                 listItemsRequired += newItem.numberRequired;
@@ -88,7 +89,7 @@ public class ShoppingList : MonoBehaviour
                 availableItemsList.Remove(item); //ensure an item isnt selected twice
 
                 newItem.listElement = Instantiate(shoppingListElement, shoppingListContainer.transform);
-                newItem.listElement.text = item.itemName + " - " + 0 + " / " + newItem.numberRequired;
+                newItem.listElement.text = item.itemName; // + " - " + 0 + " / " + newItem.numberRequired;
             }
         }
 

@@ -10,10 +10,16 @@ public class ItemInWorld : MonoBehaviour
 
     public void Start()
     {
-        if (Random.Range(0f,5f) >= 3)
-        GetComponent<MeshRenderer>().material.color = Random.ColorHSV(0f , 0.2f, 0.1f, 0.7f, 0.5f, 1f);
+       SetRandomColour();
+    }
+
+    [ContextMenu("Set Random Colour")]
+    public void SetRandomColour()
+    {
+        if (Random.Range(0f, 5f) >= 3)
+            GetComponent<MeshRenderer>().material.color = Random.ColorHSV(0f, 0.2f, 0.1f, 0.7f, 0.5f, 1f);
         else
-        GetComponent<MeshRenderer>().material.color = Random.ColorHSV(0.45f , 0.9f, 0.1f, 0.7f, 0.5f, 1f);
+            GetComponent<MeshRenderer>().material.color = Random.ColorHSV(0.45f, 0.9f, 0.1f, 0.7f, 0.5f, 1f);
     }
 
     //public List<ItemInteraction> itemInteractions;

@@ -8,7 +8,7 @@ public class GameSettings : ScriptableObject
 {
     public string selectedLevel;
     public int numberOfItems;
-    public bool multiplesOfItems;
+    //public bool multiplesOfItems;
     public float amountOfTime;
     public bool unlimitedTime;
 }

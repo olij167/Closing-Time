@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public GameObject titlePanel;
     public GameObject setUpPanel;
 
     public GameSettings gameSettings;
@@ -26,10 +27,14 @@ public class Menu : MonoBehaviour
             SelectLevel();
             SetGameLength();
             SetListLength();
-            ToggleItemMultiples();
+            //ToggleItemMultiples();
+            titlePanel.SetActive(false);
         }
         else
+        {
             setUpPanel.SetActive(false);
+            titlePanel.SetActive(true);
+        }
     }
 
     public void StartGame()
@@ -77,10 +82,10 @@ public class Menu : MonoBehaviour
         gameSettings.numberOfItems = itemNumberDropdown.value + 1;
     }
 
-    public void ToggleItemMultiples()
-    {
-        gameSettings.multiplesOfItems = itemMultiplesToggle.isOn;
-    }
+    //public void ToggleItemMultiples()
+    //{
+    //    gameSettings.multiplesOfItems = itemMultiplesToggle.isOn;
+    //}
     public void Quit()
     {
         Application.Quit();

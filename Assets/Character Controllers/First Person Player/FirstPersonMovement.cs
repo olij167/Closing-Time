@@ -202,7 +202,10 @@ public class FirstPersonMovement : MonoBehaviour
 
         if (rb.velocity.magnitude > 2f && !audioSource.isPlaying && isGrounded)
         {
-           // animator.SetBool("isWalking", true);
+            // animator.SetBool("isWalking", true);
+            Vector3 stretchScale = new Vector3(transform.localScale.x * -Mathf.Abs(rb.velocity.x), transform.localScale.y * -Mathf.Abs( rb.velocity.y), transform.localScale.z * -Mathf.Abs(rb.velocity.z)) ;
+            transform.localScale = Vector3.Lerp(Vector3.one, stretchScale, Time.deltaTime * 0.5f);
+            //transform.localScale = stretchScale;
 
             audioSource.volume = Random.Range(0.25f, 0.35f);
             audioSource.pitch = Random.Range(walkingPitchRange.x, walkingPitchRange.y);
@@ -212,8 +215,17 @@ public class FirstPersonMovement : MonoBehaviour
 
             lastFootstep = footstep;
         }
-        //else if (rb.velocity.magnitude < 2f)
-        //    animator.SetBool("isWalking", false);
+        else if (rb.velocity.magnitude < 2f)
+        {
+            transform.localScale = Vector3.one;
+            Vector3 prevScale = transform.localScale;
+            transform.localScale = Vector3.Lerp(prevScale, Vector3.one, Time.deltaTime * 0.5f);
+            //transform.localScale = prevScale;
+
+            //    animator.SetBool("isWalking", false);
+
+        }
+
 
 
     }

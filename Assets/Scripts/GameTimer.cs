@@ -9,6 +9,7 @@ public class GameTimer : MonoBehaviour
 {
     private ShoppingList shoppingList;
     private ItemScanner itemScanner;
+    public float fullTimer;
     public float timer;
     public bool timerActive;
     public bool gameOver;
@@ -16,6 +17,8 @@ public class GameTimer : MonoBehaviour
     public string menuScene;
 
     public TextMeshProUGUI timerText;
+    public Color timerOriginal;
+    public Color timerDire;
     public GameObject endGameScreen;
     public GameObject endGameStatsParent;
 
@@ -41,19 +44,29 @@ public class GameTimer : MonoBehaviour
         itemScanner = FindObjectOfType<ItemScanner>();
 
         endGameScreen.SetActive(false);
+
+        fullTimer = timer;
     }
     public void StartTimer()
     {
+        timerText.enabled = true;
+
         timerActive = true;
+        FindObjectOfType<FirstPersonMovement>().enabled = true;
+            FindObjectOfType<FirstPersonCam>().enabled = true;
+        FindObjectOfType<InteractionRaycast>().enabled = true;
     }
 
     public void Update()
     {
         if (timerActive)
         {
-            timerText.text = timer.ToString("00:00");
+            timerText.text = timer.ToString("00");
 
             timer -= Time.deltaTime;
+
+            timerText.color = Color.Lerp( timerOriginal, timerDire, (fullTimer - timer) / fullTimer);
+            
 
             if (timer <= 0f)
             {
@@ -66,6 +79,7 @@ public class GameTimer : MonoBehaviour
         {
             FindObjectOfType<FirstPersonMovement>().enabled = false;
             FindObjectOfType<InteractionRaycast>().enabled = false;
+            FindObjectOfType<FirstPersonCam>().enabled = false;
 
             SetStats();
             //display end game screen
