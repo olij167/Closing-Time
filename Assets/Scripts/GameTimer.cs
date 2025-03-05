@@ -9,6 +9,7 @@ public class GameTimer : MonoBehaviour
 {
     private ShoppingList shoppingList;
     private ItemScanner itemScanner;
+    private GameSetUp setUp;
     public float fullTimer;
     public float timer;
     public bool timerActive;
@@ -32,17 +33,20 @@ public class GameTimer : MonoBehaviour
 
     public float shopperScore = 0f;
     public TextMeshProUGUI shopperScoreStatText;
-    public TextMeshProUGUI leaveEarlyBonusText;
+
+    public float timeRemaining;
+    public TextMeshProUGUI timerRemainingText;
 
     private ToggleCursorLock toggleCursor;
 
-    private bool endGameSet = false;
+    public bool endGameSet;
     private void Start()
     {
         timerText = GetComponentInChildren<TextMeshProUGUI>();
         shoppingList = FindObjectOfType<ShoppingList>();
         itemScanner = FindObjectOfType<ItemScanner>();
 
+        setUp = FindObjectOfType<GameSetUp>();
         endGameScreen.SetActive(false);
 
         fullTimer = timer;
@@ -77,20 +81,9 @@ public class GameTimer : MonoBehaviour
 
         if (gameOver)
         {
-            FindObjectOfType<FirstPersonMovement>().enabled = false;
-            FindObjectOfType<InteractionRaycast>().enabled = false;
-            FindObjectOfType<FirstPersonCam>().enabled = false;
 
-            SetStats();
-            //display end game screen
-            endGameScreen.SetActive(true);
-            if (!endGameSet)
-            {
-                itemScanner.SpawnItemsEndGame();
-                endGameSet = true;
-            
-            }
-            toggleCursor.UnlockCursor();
+           if (!endGameScreen.activeSelf) EndGameScreen();
+
             //Display end game stats
 
             //if (itemScanner.showStats)
@@ -103,6 +96,30 @@ public class GameTimer : MonoBehaviour
             //}
 
         }
+    }
+
+    public void EndGameScreen()
+    {
+        if (!endGameScreen.activeSelf)
+        {
+            FindObjectOfType<FirstPersonMovement>().enabled = false;
+            FindObjectOfType<InteractionRaycast>().enabled = false;
+            FindObjectOfType<FirstPersonCam>().enabled = false;
+
+            SetStats();
+            //display end game screen
+            endGameScreen.SetActive(true);
+
+            SaveSystem.SaveStats(setUp.gameSettings, this);
+
+            itemScanner.SpawnItemsEndGame();
+
+            toggleCursor.UnlockCursor();
+
+            endGameSet = true;
+
+        }
+        else return;
     }
 
     public void SetStats()
@@ -156,14 +173,17 @@ public class GameTimer : MonoBehaviour
         //Budget Accuracy
         budgetInfoText.text = "You spent $" + shoppingList.totalCost + ". \n The budget was $" + shoppingList.listBudget;
 
-         
+        //timeRemaining = (timer / fullTimer) * 100;
+
+        timerRemainingText.text = "Time Left: " + timer.ToString("00") + " / " + fullTimer + " secs";
 
         //Debug.Log("accuracy = " + accuracy + "\n" + "budget = " + budget);
-        shopperScore = accuracy * budget * 100; // << score formula.. did I enter it wrong?
-        shopperScoreStatText.text = "Shopper Score: " + shopperScore + " / 100";
+        shopperScore = Mathf.Round( accuracy * budget * 100); // << score formula.. did I enter it wrong?
+        shopperScoreStatText.text = "Shopper Score: \n" + shopperScore + " / 100";
 
         //Shopper Score
         // Compare other stats to get their final score
+
     }
 
     public void LeaveStore()

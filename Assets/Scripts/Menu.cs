@@ -4,11 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 
 public class Menu : MonoBehaviour
 {
     public GameObject titlePanel;
     public GameObject setUpPanel;
+    //public GameObject statsPanel;
+
+    public TextMeshProUGUI accuracyText;
+    public TextMeshProUGUI budgetText;
+    public TextMeshProUGUI timeText;
+    public TextMeshProUGUI scoreText;
 
     public GameSettings gameSettings;
 
@@ -23,6 +30,27 @@ public class Menu : MonoBehaviour
     {
         if (!setUpPanel.activeSelf)
         {
+            if (SaveSystem.RememberStat(gameSettings) != null)
+            {
+                GameStats stats = SaveSystem.RememberStat(gameSettings);
+                //statsPanel.SetActive(true);
+
+                accuracyText.text = "Accuracy: " + stats.accuracyScore;
+                budgetText.text = "Budget: " + stats.budgetScore;
+                timeText.text = "Time Left: " + stats.timeTaken + "s / " + stats.fullTime + "s";
+                scoreText.text = "Score: " + stats.shopperScore;
+
+            }
+            else
+            {
+                accuracyText.text = "Accuracy: N/A";
+                budgetText.text = "Budget: N/A";
+                timeText.text = "Time Left: N/A";
+                scoreText.text = "Score: N/A";
+                //statsPanel.SetActive(true);
+            }
+
+
             setUpPanel.SetActive(true);
             SelectLevel();
             SetGameLength();

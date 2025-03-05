@@ -52,7 +52,9 @@ public class MenuVisualDisplay : MonoBehaviour
 
                 Vector3 spacedPosition = new Vector3(startPos.position.x + nextColumnSpace, startPos.position.y - nextRowSpace, startPos.position.z);
 
-                spawnedItems.Add(Instantiate(availableItems[i].prefab, spacedPosition, Quaternion.identity, transform));
+                Quaternion rand = Quaternion.Euler(Random.Range(0.0f, 360.0f), Random.Range(0.0f, 360.0f), Random.Range(0.0f, 360.0f));
+
+                spawnedItems.Add(Instantiate(availableItems[i].prefab, spacedPosition, rand, transform));
 
                 spawnedItems[spawnedItems.Count - 1].AddComponent<MenuItem>();
 
