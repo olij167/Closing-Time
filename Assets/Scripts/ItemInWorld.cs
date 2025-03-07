@@ -7,6 +7,7 @@ using UnityEngine;
 public class ItemInWorld : MonoBehaviour
 {
     public Item item;
+    public bool isScanned;
 
     public void Start()
     {

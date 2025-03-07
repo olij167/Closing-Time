@@ -2369,7 +2369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoppingList: {fileID: 636209570}
   spawnPos: {fileID: 891223848}
-  spawnDelay: 1
+  spawnDelay: 0.75
   spawnQueue: []
   costTrackerText: {fileID: 1389286097}
   receiptItemPrefab: {fileID: 2958046910700668824, guid: 447d4206047938043934300b9809ee4e,
@@ -14798,6 +14798,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1666523953122441653, guid: e1482b2e6c874524089790f46e1db901,
+        type: 3}
+      propertyPath: selectInput
+      value: 323
+      objectReference: {fileID: 0}
     - target: {fileID: 1666523953122441653, guid: e1482b2e6c874524089790f46e1db901,
         type: 3}
       propertyPath: reachDistance

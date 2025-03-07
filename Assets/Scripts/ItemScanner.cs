@@ -103,21 +103,25 @@ public class ItemScanner : MonoBehaviour
 
     public void ScanItem(ItemInWorld itemInWorld)
     {
-        // Add to total cost tracker
-        receiptRunningTotal += itemInWorld.item.itemValue;
-        costTrackerText.text = "$" + receiptRunningTotal.ToString("00.00");
-        // print info onto receipt
-        audioSource.PlayOneShot(scannerAudioClip);
-
-        //itemInWorld.GetComponent<Collider>().enabled = false;
-
-        PrintToReceipt(itemInWorld);
-
-        if (receiptList.Count == shoppingList.totalItemsCollected)
+        if (!itemInWorld.isScanned)
         {
-            showStats = true;
-        }
+            // Add to total cost tracker
+            receiptRunningTotal += itemInWorld.item.itemValue;
+            costTrackerText.text = "$" + receiptRunningTotal.ToString("00.00");
+            // print info onto receipt
+            audioSource.PlayOneShot(scannerAudioClip);
 
+            //itemInWorld.GetComponent<Collider>().enabled = false;
+
+            PrintToReceipt(itemInWorld);
+
+            if (receiptList.Count == shoppingList.totalItemsCollected)
+            {
+                showStats = true;
+            }
+
+            itemInWorld.isScanned = true;
+        }
     }
 
     public void PrintToReceipt(ItemInWorld itemInWorld)
@@ -131,6 +135,7 @@ public class ItemScanner : MonoBehaviour
 
         receiptList.Add(rItem);
         receiptScrollbar.value = 0;
+
     }
 
     public void OnTriggerEnter(Collider other)

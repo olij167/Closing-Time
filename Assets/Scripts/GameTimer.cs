@@ -164,12 +164,12 @@ public class GameTimer : MonoBehaviour
         accuracy = (float)shoppingList.listItemsCollected / (float)shoppingList.listItemsRequired;
         budget = shoppingList.listBudget / shoppingList.totalCost;
 
-        accuracyScoreText.text = "Accuracy: " + accuracy * 100;
+        accuracyScoreText.text = "Accuracy: " + Mathf.Round(accuracy * 100);
         accuracyInfoText.text += "\n" + extraItemsCollected + " items weren't on the list";
 
 
 
-        budgetScoreText.text = "Budget: " + budget * 100;
+        budgetScoreText.text = "Budget: " + Mathf.Round(budget * 100);
         //Budget Accuracy
         budgetInfoText.text = "You spent $" + shoppingList.totalCost + ". \n The budget was $" + shoppingList.listBudget;
 

@@ -79,7 +79,11 @@ public class InteractionRaycast : MonoBehaviour
 
                 interactionAimIndicator.color = Color.red;
 
-                interactPromptText.text = "Press " + selectInput + "to Pay \n (End Level)";
+                if (selectInput != KeyCode.Mouse0)
+                    interactPromptText.text = "Press [" + selectInput + "] to Pay \n (End Level)";
+                else
+                    interactPromptText.text = "Press [LMB] to Pay \n (End Level)";
+
             }
             else if (!isItem)
             {
