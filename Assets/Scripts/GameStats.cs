@@ -22,7 +22,7 @@ public class GameStats
     {
         level = gameSettings.selectedLevel;
 
-        accuracyScore = Mathf.Round(gameTimer.accuracy * 100);
+        accuracyScore = Mathf.Round(gameTimer.requiredItemAccuracy * 100);
         budgetScore = Mathf.Round(gameTimer.budget * 100);
         shopperScore = Mathf.Round(gameTimer.shopperScore);
         timeTaken = Mathf.Round(gameTimer.timer);
