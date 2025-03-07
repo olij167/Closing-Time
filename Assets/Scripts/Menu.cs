@@ -12,10 +12,15 @@ public class Menu : MonoBehaviour
     public GameObject setUpPanel;
     //public GameObject statsPanel;
 
-    public TextMeshProUGUI accuracyText;
-    public TextMeshProUGUI budgetText;
-    public TextMeshProUGUI timeText;
-    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI lastAccuracyText;
+    public TextMeshProUGUI lastBudgetText;
+    public TextMeshProUGUI lastTimeText;
+    public TextMeshProUGUI lastScoreText;
+     
+    public TextMeshProUGUI bestAccuracyText;
+    public TextMeshProUGUI bestBudgetText;
+    public TextMeshProUGUI bestTimeText;
+    public TextMeshProUGUI bestScoreText;
 
     public GameSettings gameSettings;
 
@@ -30,23 +35,43 @@ public class Menu : MonoBehaviour
     {
         if (!setUpPanel.activeSelf)
         {
-            if (SaveSystem.RememberStat(gameSettings) != null)
+            if (SaveSystem.RememberLastStat(gameSettings) != null)
             {
-                GameStats stats = SaveSystem.RememberStat(gameSettings);
+                GameStats lastStats = SaveSystem.RememberLastStat(gameSettings);
                 //statsPanel.SetActive(true);
 
-                accuracyText.text = "Accuracy: " + stats.accuracyScore;
-                budgetText.text = "Budget: " + stats.budgetScore;
-                timeText.text = "Time Left: " + stats.timeTaken + "s / " + stats.fullTime + "s";
-                scoreText.text = "Score: " + stats.shopperScore;
+                lastAccuracyText.text = "Accuracy: " + lastStats.accuracyScore;
+                lastBudgetText.text = "Budget: " + lastStats.budgetScore;
+                lastTimeText.text = "Time Left: " + lastStats.timeTaken + "s / " + lastStats.fullTime + "s";
+                lastScoreText.text = "Score: " + lastStats.shopperScore;
 
             }
             else
             {
-                accuracyText.text = "Accuracy: N/A";
-                budgetText.text = "Budget: N/A";
-                timeText.text = "Time Left: N/A";
-                scoreText.text = "Score: N/A";
+                lastAccuracyText.text = "Accuracy: N/A";
+                lastBudgetText.text = "Budget: N/A";
+                lastTimeText.text = "Time Left: N/A";
+                lastScoreText.text = "Score: N/A";
+                //statsPanel.SetActive(true);
+            }
+            
+            if (SaveSystem.RememberBestStat(gameSettings) != null)
+            {
+                GameStats bestStats = SaveSystem.RememberBestStat(gameSettings);
+                //statsPanel.SetActive(true);
+
+                bestAccuracyText.text = "Accuracy: " + bestStats.accuracyScore;
+                bestBudgetText.text = "Budget: " + bestStats.budgetScore;
+                bestTimeText.text = "Time Left: " + bestStats.timeTaken + "s / " + bestStats.fullTime + "s";
+                bestScoreText.text = "Score: " + bestStats.shopperScore;
+
+            }
+            else
+            {
+                bestAccuracyText.text = "Accuracy: N/A";
+                bestBudgetText.text = "Budget: N/A";
+                bestTimeText.text = "Time Left: N/A";
+                bestScoreText.text = "Score: N/A";
                 //statsPanel.SetActive(true);
             }
 

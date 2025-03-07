@@ -40,6 +40,8 @@ public class GameTimer : MonoBehaviour
     private ToggleCursorLock toggleCursor;
 
     public bool endGameSet;
+
+    public TextMeshProUGUI bestScoreIndicator;
     private void Start()
     {
         timerText = GetComponentInChildren<TextMeshProUGUI>();
@@ -48,6 +50,7 @@ public class GameTimer : MonoBehaviour
 
         setUp = FindObjectOfType<GameSetUp>();
         endGameScreen.SetActive(false);
+        bestScoreIndicator.gameObject.SetActive(false);
 
         fullTimer = timer;
     }
@@ -111,6 +114,20 @@ public class GameTimer : MonoBehaviour
             endGameScreen.SetActive(true);
 
             SaveSystem.SaveStats(setUp.gameSettings, this);
+
+            GameStats bestStats = SaveSystem.RememberBestStat(setUp.gameSettings);
+
+            if (bestStats != null)
+            {
+                bestScoreIndicator.gameObject.SetActive(true);
+
+                if (bestStats.shopperScore == shopperScore)
+                {
+                    bestScoreIndicator.text = "New Highscore!";
+                }
+                else
+                    bestScoreIndicator.text = "Best Score: " + bestStats.shopperScore;
+            }
 
             itemScanner.SpawnItemsEndGame();
 

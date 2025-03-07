@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 
 public class StockManager : MonoBehaviour
 {
@@ -143,7 +145,8 @@ public class StockManager : MonoBehaviour
                 {
                     foreach (Transform c in storeSections[i].stockPositions[j].transform)
                     {
-                        DestroyImmediate(c.gameObject);
+                        if (!c.GetComponent<Canvas>())
+                            DestroyImmediate(c.gameObject);
                     }
                 }
 

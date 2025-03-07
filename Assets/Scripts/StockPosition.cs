@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class StockPosition : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class StockPosition : MonoBehaviour
 
     public GameObject spawnedItem;
 
+    public TextMeshProUGUI itemNameText;
+    public TextMeshProUGUI itemPriceText;
     private void Start()
     {
         GetComponent<MeshRenderer>().enabled = false;
@@ -26,6 +29,31 @@ public class StockPosition : MonoBehaviour
         ItemInWorld itemInWorld = spawnedObj.GetComponent<ItemInWorld>();
         itemInWorld.item = item;
 
-        return spawnedItem = spawnedObj;
+        if (item != null)
+        {
+            if (itemNameText != null)
+            {
+                itemNameText.text = item.itemName;
+            }
+
+            if (itemPriceText != null)
+            {
+                itemPriceText.text = "$ " + item.itemValue;
+            }
+        }
+        else
+        {
+            if (itemNameText != null)
+            {
+                itemNameText.text = "";
+            }
+
+            if (itemPriceText != null)
+            {
+                itemPriceText.text = "";
+            }
+        }
+
+            return spawnedItem = spawnedObj;
     }
 }

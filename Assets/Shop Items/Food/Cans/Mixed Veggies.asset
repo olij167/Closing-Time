@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Mixed Veggies
   itemValue: 2
+  itemIcon: {fileID: 0}
   type: 0
-  prefab: {fileID: 639703528917891530, guid: 5d776e74b35360343bcdec20bb5e74f2, type: 3}
+  prefab: {fileID: 8123340161755232127, guid: afabffe47cb53154e9e31d82b8c54fe4, type: 3}
