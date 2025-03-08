@@ -25,6 +25,7 @@ public class GameTimer : MonoBehaviour
 
     public float requiredItemAccuracy;
     public float extraItemAccuracy;
+    public float accuracy;
     public TextMeshProUGUI accuracyScoreText;
     public TextMeshProUGUI accuracyInfoText;
 
@@ -181,10 +182,12 @@ public class GameTimer : MonoBehaviour
 
         requiredItemAccuracy = (float)shoppingList.listItemsCollected / (float)shoppingList.listItemsRequired;
 
-        extraItemAccuracy = (float)shoppingList.listItemsCollected + extraItemsCollected / (float)shoppingList.listItemsRequired;
+        extraItemAccuracy = ((float)shoppingList.listItemsCollected + extraItemsCollected) / (float)shoppingList.listItemsRequired;
         budget = shoppingList.listBudget / shoppingList.totalCost;
 
-        accuracyScoreText.text = "Accuracy: " + Mathf.Round((requiredItemAccuracy * 100) / extraItemAccuracy);
+        accuracy = requiredItemAccuracy / extraItemAccuracy;
+
+        accuracyScoreText.text = "Accuracy: " + Mathf.Round(accuracy * 100);
         accuracyInfoText.text += "\n" + extraItemsCollected + " items weren't on the list";
 
 
@@ -198,7 +201,7 @@ public class GameTimer : MonoBehaviour
         timerRemainingText.text = "Time Left: " + timer.ToString("00") + " / " + fullTimer + " secs";
 
         //Debug.Log("accuracy = " + accuracy + "\n" + "budget = " + budget);
-        shopperScore = Mathf.Round( requiredItemAccuracy * budget * 100); // << score formula.. did I enter it wrong?
+        shopperScore = Mathf.Round( accuracy * budget * 100); // << score formula.. did I enter it wrong?
         shopperScoreStatText.text = "Shopper Score: \n" + shopperScore + " / 100";
 
         //Shopper Score

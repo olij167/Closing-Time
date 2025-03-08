@@ -10581,6 +10581,8 @@ MonoBehaviour:
   countdownTimer: {fileID: 91117575}
   fullTimer: 0
   timer: 5
+  defaultListText: {r: 0.03529412, g: 0.03529412, b: 0.101960786, a: 1}
+  highlightListText: {r: 0.9960785, g: 0.9215687, b: 0.2509804, a: 0}
 --- !u!4 &1413880474
 Transform:
   m_ObjectHideFlags: 0

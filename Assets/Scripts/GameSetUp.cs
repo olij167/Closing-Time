@@ -16,6 +16,10 @@ public class GameSetUp : MonoBehaviour
     public float timer = 5f;
 
     bool gameStarted;
+
+    public Color defaultListText;
+    public Color highlightListText;
+
     private void Start()
     {
         fullTimer = timer;
@@ -53,7 +57,7 @@ public class GameSetUp : MonoBehaviour
     {
         if (!gameStarted)
         {
-            if (timer >= 1)
+            if (timer >= 2)
             {
                 gameTimer.timerText.text = gameTimer.fullTimer.ToString("00");
                 timer -= Time.deltaTime;
@@ -61,6 +65,14 @@ public class GameSetUp : MonoBehaviour
                 countdownTimer.color = Color.Lerp(gameTimer.timerOriginal, gameTimer.timerDire, (fullTimer - timer) / fullTimer);
 
                 shoppingList.shoppingListContainer.transform.localScale = Vector3.one * 2;
+
+                foreach(Transform c in shoppingList.shoppingListContainer.transform)
+                {
+                    if (c.name.Contains("Clone") && c.GetComponent<TextMeshProUGUI>())
+                    {
+                        c.GetComponent<TextMeshProUGUI>().color = Color.Lerp(defaultListText, gameTimer.timerDire, ((fullTimer - timer) / fullTimer) * 2);
+                    }
+                }
             }
             else if (timer < 2 && timer > 0)
             {
@@ -70,6 +82,14 @@ public class GameSetUp : MonoBehaviour
                 countdownTimer.text = "GO!";
 
                 shoppingList.shoppingListContainer.transform.localScale = Vector3.Lerp(Vector3.one, shoppingList.shoppingListContainer.transform.localScale, timer);
+
+                foreach (Transform c in shoppingList.shoppingListContainer.transform)
+                {
+                    if (c.name.Contains("Clone") && c.GetComponent<TextMeshProUGUI>())
+                    {
+                        c.GetComponent<TextMeshProUGUI>().color = Color.Lerp(defaultListText, gameTimer.timerDire,  timer);
+                    }
+                }
 
             }
             else if (timer <= 0)

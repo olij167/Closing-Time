@@ -3184,8 +3184,8 @@ MonoBehaviour:
   item: {fileID: 0}
   numToSpawn: 3
   spawnedItem: {fileID: 0}
-  itemNameText: {fileID: 0}
-  itemPriceText: {fileID: 0}
+  itemNameText: {fileID: 2718141420024995844}
+  itemPriceText: {fileID: 5373131997370736023}
 --- !u!1 &4428935370945283080
 GameObject:
   m_ObjectHideFlags: 0
